@@ -1,6 +1,6 @@
 {
   "name": "SalesForceReusableLibrary",
-  "description": "This library contains reusable activities for generating leads and orders in SalesForce.",
+  "description": "This library contains reusable activities for generating leads and opportunities in SalesForce.",
   "main": "ReusableLeadGenerationActivity.xaml",
   "dependencies": {
     "Connector.Salesforce.Activities": "1.1.0",
