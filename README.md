@@ -4,7 +4,8 @@ in a generic way and it is fully configurable via arguments.
 
 The library contains two main components:
 
-## LeadGeneration - this highly reusable component can be used to generate Leads in SalesForce. It accepts the following configuration arguments:
+## LeadGeneration
+This highly reusable component can be used to generate Leads in SalesForce. It accepts the following configuration arguments:
 
 - FirstName - the first name of the lead 
 - LastName - the last name of the lead
@@ -16,7 +17,8 @@ The library contains two main components:
 - SFPassword - your production SalesForce password
 - SFSecurityToken - SalesForce security token
 
-## OpportunityGeneration - this highly reusable component can be used to generate Opportunities in SalesForce. It accepts the following configuration arguments:
+## OpportunityGeneration
+This highly reusable component can be used to generate Opportunities in SalesForce. It accepts the following configuration arguments:
 
 - Product - the name of the product the client is interested in 
 - SFConsumerKey - SalesForce consumer key
