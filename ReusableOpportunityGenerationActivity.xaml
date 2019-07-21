@@ -1,0 +1,124 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ReusableOpportunityGenerationActivity" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:usl="clr-namespace:UiPathTeam.Salesforce.Lightning_Platform;assembly=UiPathTeam.Salesforce.Lightning_Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="SFUserName" Type="InArgument(x:String)" />
+    <x:Property Name="SFPassword" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="SFSecurityToken" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="SFConsumerSecret" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="SFConsumerKey" Type="InArgument(x:String)" />
+    <x:Property Name="Product" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>508.8,435.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ReusableOpportunityGenerationActivity_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ReusableOpportunityGenerationActivity" sap:VirtualizedContainerService.HintSize="468.8,355.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <usl:Salesforce_Application_Scope ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Password="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" SecurityToken="{x:Null}" UserName="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" ConsumerKeyProd="[SFConsumerKey]" ConsumerSecretProd="[SFConsumerSecret]" DisplayName="Salesforce Application Scope" EnvironmentType="Production" sap:VirtualizedContainerService.HintSize="430.4,262.4" sap2010:WorkflowViewState.IdRef="Salesforce_Application_Scope_1" PasswordProd="[SFPassword]" SecurityTokenProd="[SFSecurityToken]" ServerType="Live" UserNameProd="[SFUserName]">
+      <usl:Salesforce_Application_Scope.Body>
+        <ActivityAction x:TypeArguments="usl:SalesForceProperty">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="usl:SalesForceProperty" Name="SalesForceScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="254.4,152" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <usl:Add_Opportunity OpportunityID="{x:Null}" Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" DisplayName="Add Opportunity" sap:VirtualizedContainerService.HintSize="216,59.2" sap2010:WorkflowViewState.IdRef="Add_Opportunity_1" cmdTYPE="AddOpportunity">
+              <usl:Add_Opportunity.Parameters>
+                <scg:List x:TypeArguments="usl:ParametersArgument" Capacity="4">
+                  <usl:ParametersArgument>
+                    <usl:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">CloseDate</InArgument>
+                    </usl:ParametersArgument.Parameter>
+                    <usl:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">2019-09-15</InArgument>
+                    </usl:ParametersArgument.ValueData>
+                  </usl:ParametersArgument>
+                  <usl:ParametersArgument>
+                    <usl:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">Name</InArgument>
+                    </usl:ParametersArgument.Parameter>
+                    <usl:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">[Product]</InArgument>
+                    </usl:ParametersArgument.ValueData>
+                  </usl:ParametersArgument>
+                  <usl:ParametersArgument>
+                    <usl:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">OwnerId</InArgument>
+                    </usl:ParametersArgument.Parameter>
+                    <usl:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">0052o000008lGwlAAE</InArgument>
+                    </usl:ParametersArgument.ValueData>
+                  </usl:ParametersArgument>
+                  <usl:ParametersArgument>
+                    <usl:ParametersArgument.Parameter>
+                      <InArgument x:TypeArguments="x:String">StageName</InArgument>
+                    </usl:ParametersArgument.Parameter>
+                    <usl:ParametersArgument.ValueData>
+                      <InArgument x:TypeArguments="x:String">Prospecting</InArgument>
+                    </usl:ParametersArgument.ValueData>
+                  </usl:ParametersArgument>
+                </scg:List>
+              </usl:Add_Opportunity.Parameters>
+            </usl:Add_Opportunity>
+          </Sequence>
+        </ActivityAction>
+      </usl:Salesforce_Application_Scope.Body>
+    </usl:Salesforce_Application_Scope>
+  </Sequence>
+</Activity>

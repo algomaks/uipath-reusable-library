@@ -1,0 +1,40 @@
+{
+  "name": "SalesForceReusableLibrary",
+  "description": "This library contains reusable activities for generating leads and orders in SalesForce.",
+  "main": "ReusableLeadGenerationActivity.xaml",
+  "dependencies": {
+    "Connector.Salesforce.Activities": "1.1.0",
+    "SalesForceChatter.NetStandard": "1.3.2",
+    "SFDC.SalesforceApi": "1.0.0.3",
+    "SimpleSalesforceConnect": "3.1.1",
+    "UiPath.Excel.Activities": "2.6.2",
+    "UiPath.Mail.Activities": "1.5.0",
+    "UiPath.System.Activities": "19.6.0",
+    "UiPath.UIAutomation.Activities": "19.6.0",
+    "UiPathTeam.Salesforce.Lightning_Platform.Activities": "1.0.0.787"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.7.0.0",
+  "projectVersion": "1.0.13",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    }
+  },
+  "expressionLanguage": "VisualBasic"
+}
