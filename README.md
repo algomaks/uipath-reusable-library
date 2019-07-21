@@ -2,7 +2,7 @@
 This is a reusable UiPath library that anyone can use to generate Leads and Opportunities in SalesForce. The library is written
 in a generic way and it is fully configurable via arguments.
 
-The library contains two main components:
+The library contains two main reusable components LeadGeneration and OpportunityGeneration.
 
 ## LeadGeneration
 This highly reusable component can be used to generate Leads in SalesForce. It accepts the following configuration arguments:
