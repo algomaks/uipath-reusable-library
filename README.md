@@ -31,3 +31,6 @@ This highly reusable component can be used to generate Opportunities in SalesFor
 - You can easily connect this library with your SalesForce instance. You just have to provide your SalesForce credentials as arguments (see above the exact names).
 
 - You can also easily connect this library with a different CRM system if you would like to.
+
+## License
+MIT
